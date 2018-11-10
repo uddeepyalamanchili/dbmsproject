@@ -27,18 +27,18 @@ session_start();
 	  <form method="post"  action="gen_n.php">
 	  <?php
 
-			$name1=$_POST["name1"];
-			$name2=$_POST["name2"];
-			$name3=$_POST["name3"];
-			$name4=$_POST["name4"];
-			$age1=$_POST["age1"];
-			$age2=$_POST["age2"];
-			$age3=$_POST["age3"];
-			$age4=$_POST["age4"];
-			$gender1=$_POST["GENDER1"];
-			$gender2=$_POST["GENDER2"];
-			$gender3=$_POST["GENDER3"];
-			$gender4=$_POST["GENDER4"];
+
+
+
+
+
+
+
+
+
+
+
+
 
 			$link=mysqli_connect("localhost", "root","jaihindh","user") or die(mysqli_error());
 
@@ -77,6 +77,9 @@ session_start();
 					print"<tr><td><u>Passenger$ps</u></td></tr>";
 						switch ($ps) {
 								case 1:
+                  $name1=$_POST["name1"];
+                  $age1=$_POST["age1"];
+                  $gender1=$_POST["GENDER1"];
 									print"<p>Name :$name1</p>";
 									print"<p>Age :$age1</p><br>";
 									$_SESSION["panme1"]=$name1;
@@ -84,18 +87,27 @@ session_start();
 
 									break;
 								case 2:
+                  $name2=$_POST["name2"];
+                  $age2=$_POST["age2"];
+                  $gender2=$_POST["GENDER2"];
 									print"<p>Name :$name2</p>";
 									print"<p>Age :$age2</p>";
 									$_SESSION["panme2"]=$name2;
 									$_SESSION["age2"]=$age2;
 									break;
 								case 3:
+                  $name3=$_POST["name3"];
+                  $age3=$_POST["age3"];
+                  $gender3=$_POST["GENDER3"];
 									print"<p>Name :$name3</p>";
 									print"<p>Age:$age3</p>";
 									$_SESSION["panme3"]=$name3;
 									$_SESSION["age3"]=$age3;
 									break;
 								case 4:
+                  $name4=$_POST["name4"];
+                  $age4=$_POST["age4"];
+                  $gender4=$_POST["GENDER4"];
 									print"<p>Name :$name4</p>";
 									print"<p>Age :$age4</p>";
 									$_SESSION["panme4"]=$name4;
